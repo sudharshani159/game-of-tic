@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-image: url('download.jfif'); /* Set your anime background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    color: #ffffff; /* Change text color to ensure visibility */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff; /* White color for the title */
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px; /* Increased font size */
+    background-color: rgba(255, 255, 255, 0.8); /* White with some transparency */
+    border: 2px solid #00796b; /* Teal border for cells */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.cell:hover {
+    background-color: rgba(178, 223, 219, 0.8); /* Light teal when hovering */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cell.X {
+    color: #1976d2; /* Blue color for 'X' */
+}
+
+.cell.O {
+    color: #ffffff; /* White color for 'O' */
+    background-color: #1976d2; /* Blue background for 'O' */
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff; /* White for status text */
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #00796b; /* Teal background for button */
+    color: white; /* White text color for button */
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+#restart:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
